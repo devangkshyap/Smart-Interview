@@ -22,7 +22,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (token) {
-      fetch('http://127.0.0.1:5000/api/resumes', {
+      fetch('/api/resumes', {
         headers: { 'Authorization': `Bearer ${token}` }
       })
       .then(res => res.json())
@@ -47,7 +47,7 @@ export default function ProfilePage() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/resumes/upload', {
+      const response = await fetch('/api/resumes/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`

@@ -101,7 +101,7 @@ export default function InterviewConfiguration() {
   const handleLaunch = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/interviews', {
+      const response = await fetch('/api/interviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

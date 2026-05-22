@@ -20,7 +20,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const interviewsRes = await fetch('http://127.0.0.1:5000/api/interviews', {
+        const interviewsRes = await fetch('/api/interviews', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (interviewsRes.ok) {
@@ -28,7 +28,7 @@ export default function Dashboard() {
           setRecentInterviews(data.interviews || []);
         }
 
-        const resumesRes = await fetch('http://127.0.0.1:5000/api/resumes', {
+        const resumesRes = await fetch('/api/resumes', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (resumesRes.ok) {
@@ -60,11 +60,11 @@ export default function Dashboard() {
   const clearHistory = async () => {
     try {
       await Promise.all([
-        fetch('http://127.0.0.1:5000/api/interviews/all', {
+        fetch('/api/interviews/all', {
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         }),
-        fetch('http://127.0.0.1:5000/api/resumes/all', {
+        fetch('/api/resumes/all', {
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         })

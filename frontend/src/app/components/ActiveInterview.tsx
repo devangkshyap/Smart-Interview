@@ -128,7 +128,7 @@ export default function ActiveInterview() {
   useEffect(() => {
     const fetchInterview = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/api/interviews/${id}`, {
+        const response = await fetch(`/api/interviews/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -332,7 +332,7 @@ export default function ActiveInterview() {
     if (!currentQ) return null;
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/interviews/${id}/questions/${currentQ.id}`, {
+      const response = await fetch(`/api/interviews/${id}/questions/${currentQ.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -377,7 +377,7 @@ export default function ActiveInterview() {
   const completeInterview = async () => {
     await submitAnswer();
     try {
-      await fetch(`http://127.0.0.1:5000/api/interviews/${id}`, {
+      await fetch(`/api/interviews/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

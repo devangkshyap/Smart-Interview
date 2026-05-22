@@ -12,7 +12,7 @@ export default function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/interviews?per_page=50', {
+        const response = await fetch('/api/interviews?per_page=50', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (response.ok) {

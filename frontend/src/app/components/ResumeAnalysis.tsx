@@ -48,7 +48,7 @@ export default function ResumeAnalysis({ onClose, embedded = false }: ResumeAnal
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/resumes/upload', {
+      const response = await fetch('/api/resumes/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -59,7 +59,7 @@ export default function ResumeAnalysis({ onClose, embedded = false }: ResumeAnal
       if (response.ok) {
         const data = await response.json();
         // Fetch full details
-        const fullResponse = await fetch(`http://127.0.0.1:5000/api/resumes/${data.resume.id}`, {
+        const fullResponse = await fetch(`/api/resumes/${data.resume.id}`, {
            headers: { 'Authorization': `Bearer ${token}` }
         });
         if (fullResponse.ok) {
