@@ -7,16 +7,12 @@
       "config": {
         "distDir": "dist"
       }
-    },
-    {
-      "src": "backend/run.py",
-      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/run.py"
+      "dest": "https://REPLACE_ME_WITH_YOUR_RENDER_URL.onrender.com/api/$1"
     },
     {
       "src": "/assets/(.*)",
