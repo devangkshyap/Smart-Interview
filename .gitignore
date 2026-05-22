@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+venv/
+
+# Build and compiled
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.env
+
+# Temporary files
+tmp_*
+.DS_Store
