@@ -132,4 +132,15 @@ Example:
 
 ## Author
 
-Developed by Devang Kashyap
+### 👨‍💻 Core Contributors
+
+<div align="center">
+
+| 👤 Developers | Role/Focus |
+| :--- | :--- |
+| **Vrund Darji** | Frontend Development & AI Integration |
+| **Devang Kashyap** | Backend Systems & API Development |
+| **Dhaval Jambukiya** | Authentication & Security Implementation |
+| **Zeel Patel** | Testing, Code Review & Quality Assurance |
+
+</div>
